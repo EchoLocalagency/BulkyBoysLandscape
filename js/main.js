@@ -1,10 +1,8 @@
 // ============================================
-// BULKYBOYS LANDSCAPES - Main JS (v2)
+// BULKYBOYS LANDSCAPES - Main JS (v3)
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
-  // AOS
-  AOS.init({ duration: 600, easing: 'ease-out', once: true, offset: 60 });
 
   // Nav scroll
   var nav = document.querySelector('.nav');
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var el = document.querySelector(id);
       if (el) {
         e.preventDefault();
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+        window.scrollTo({ top: el.offsetTop - 96, behavior: 'smooth' });
       }
     });
   });
@@ -51,6 +49,30 @@ document.addEventListener('DOMContentLoaded', function () {
       form.style.display = 'none';
       var success = document.querySelector('.form-success');
       if (success) success.classList.add('active');
+    });
+  }
+
+  // Gallery filters
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var galleryItems = document.querySelectorAll('.gallery-item');
+  if (filterBtns.length && galleryItems.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = this.getAttribute('data-filter');
+
+        // Update active button
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+
+        // Show/hide items
+        galleryItems.forEach(function (item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
     });
   }
 

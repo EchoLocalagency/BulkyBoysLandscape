@@ -7,10 +7,9 @@
   <meta name="description" content="Browse completed landscaping projects from Bulkyboys Landscapes. Artificial turf, pavers, retaining walls, and full yard renovations in East County San Diego.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/hero.jpg" type="image/jpeg">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
 
@@ -41,7 +40,7 @@
 
   <!-- Page Header -->
   <header class="page-header">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
       <span class="eyebrow">Portfolio</span>
       <h1>Our Work</h1>
       <p>Real projects for real homeowners across East County San Diego.</p>
@@ -51,68 +50,138 @@
   <!-- Gallery -->
   <section class="section-lg">
     <div class="container">
-      <div class="gallery-grid" data-aos="fade-up">
-        <!-- Featured -->
-        <div class="gallery-card gallery-featured">
-          <img src="images/portfolio/hero-turf-steps.jpg" alt="Stepping stones in artificial turf with retaining wall and hillside planting" loading="lazy">
-          <div class="gallery-card-label">Turf, Stepping Stones &amp; Retaining Wall</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/front-yard-turf-creek.jpg" alt="Front yard artificial turf with river rock dry creek bed" loading="lazy">
-          <div class="gallery-card-label">Front Yard Turf &amp; Creek Bed</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/xeriscaping-front.jpg" alt="Front yard xeriscaping with dark gravel and river rock boulders" loading="lazy">
-          <div class="gallery-card-label">Xeriscaping &amp; River Rock</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/full-backyard-turf.jpg" alt="Full backyard renovation with turf, retaining wall, fire pit, and patio cover" loading="lazy">
-          <div class="gallery-card-label">Full Backyard Renovation</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/modern-paver-steps.jpg" alt="Modern paver steps with raised planter bed on new construction" loading="lazy">
-          <div class="gallery-card-label">Modern Paver Steps &amp; Planters</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/hillside-turf-pavers.jpg" alt="Hillside property with artificial turf and paver patio" loading="lazy">
-          <div class="gallery-card-label">Hillside Turf &amp; Pavers</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/putting-green.jpg" alt="Custom putting green with paver border and concrete steps" loading="lazy">
-          <div class="gallery-card-label">Custom Putting Green</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/paver-walkway-pool.jpg" alt="Paver walkway with gravel and mountain view by pool" loading="lazy">
-          <div class="gallery-card-label">Paver Walkway &amp; Pool Area</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/turf-pavers-wall.jpg" alt="Turf and paver patio with retaining wall on hillside" loading="lazy">
-          <div class="gallery-card-label">Turf, Pavers &amp; Wall</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/brick-border-turf.jpg" alt="Custom brick-bordered turf with circular concrete pads" loading="lazy">
-          <div class="gallery-card-label">Custom Brick Border Design</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/backyard-turf-wall.jpg" alt="Backyard artificial turf with retaining wall" loading="lazy">
-          <div class="gallery-card-label">Backyard Turf &amp; Wall</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/curb-appeal-mediterranean.jpg" alt="Mediterranean home curb appeal with river rock and palms" loading="lazy">
-          <div class="gallery-card-label">Front Yard Curb Appeal</div>
-        </div>
-        <div class="gallery-card">
-          <img src="images/portfolio/stamped-concrete-planters.jpg" alt="Stamped concrete patio with flagstone raised planters" loading="lazy">
-          <div class="gallery-card-label">Stamped Concrete &amp; Planters</div>
-        </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="turf">Turf</button>
+        <button class="filter-btn" data-filter="pavers">Pavers</button>
+        <button class="filter-btn" data-filter="walls">Walls</button>
+        <button class="filter-btn" data-filter="renovation">Full Renovations</button>
       </div>
 
-      <div class="text-center mt-4" data-aos="fade-up">
-        <p style="color: var(--bb-text-light); margin: 0 auto;">More projects on our Instagram.</p>
-        <a href="https://www.instagram.com/bulkyboys_landscapes23/" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top: 0.5rem;">
-          Follow @bulkyboys_landscapes23
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
+      <!-- Masonry Gallery -->
+      <div class="gallery-masonry" id="gallery">
+
+        <!-- Portfolio images -->
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/hero-turf-steps.jpg" alt="Stepping stones in artificial turf with retaining wall" loading="lazy">
+          <div class="gallery-item-label">Turf, Stepping Stones &amp; Wall</div>
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/front-yard-turf-creek.jpg" alt="Front yard artificial turf with river rock dry creek bed" loading="lazy">
+          <div class="gallery-item-label">Front Yard Turf &amp; Creek Bed</div>
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/xeriscaping-front.jpg" alt="Front yard xeriscaping with dark gravel and river rock" loading="lazy">
+          <div class="gallery-item-label">Xeriscaping &amp; River Rock</div>
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/full-backyard-turf.jpg" alt="Full backyard with turf, retaining wall, fire pit" loading="lazy">
+          <div class="gallery-item-label">Full Backyard Renovation</div>
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/modern-paver-steps.jpg" alt="Modern paver steps with raised planter bed" loading="lazy">
+          <div class="gallery-item-label">Paver Steps &amp; Planters</div>
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/hillside-turf-pavers.jpg" alt="Hillside property with turf and paver patio" loading="lazy">
+          <div class="gallery-item-label">Hillside Turf &amp; Pavers</div>
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/putting-green.jpg" alt="Custom putting green with paver border" loading="lazy">
+          <div class="gallery-item-label">Custom Putting Green</div>
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/paver-walkway-pool.jpg" alt="Paver walkway by pool area" loading="lazy">
+          <div class="gallery-item-label">Paver Walkway &amp; Pool</div>
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/turf-pavers-wall.jpg" alt="Turf and paver patio with retaining wall" loading="lazy">
+          <div class="gallery-item-label">Turf, Pavers &amp; Wall</div>
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/brick-border-turf.jpg" alt="Custom brick-bordered turf" loading="lazy">
+          <div class="gallery-item-label">Custom Brick Border Design</div>
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/backyard-turf-wall.jpg" alt="Backyard artificial turf with retaining wall" loading="lazy">
+          <div class="gallery-item-label">Backyard Turf &amp; Wall</div>
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/curb-appeal-mediterranean.jpg" alt="Mediterranean home curb appeal" loading="lazy">
+          <div class="gallery-item-label">Front Yard Curb Appeal</div>
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/stamped-concrete-planters.jpg" alt="Stamped concrete patio with planters" loading="lazy">
+          <div class="gallery-item-label">Stamped Concrete &amp; Planters</div>
+        </div>
+
+        <!-- Facebook project images (visually verified) -->
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-4.jpg" alt="Side yard with river rock and plantings" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-8.jpg" alt="Front yard xeriscaping with decomposed granite" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/fb-11.jpg" alt="Front yard artificial turf with river rock border" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-12.jpg" alt="Backyard with turf, pavers, and retaining wall" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/fb-16.jpg" alt="Lush backyard artificial turf with retaining wall" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-22.jpg" alt="Raised planter beds with mulch and plantings" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/fb-25.jpg" alt="Fresh concrete walkway with artificial turf" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-28.jpg" alt="Stamped concrete patio with stone planter walls" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-30.jpg" alt="Raised stone planter beds with stamped concrete patio" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/fb-33.jpg" alt="Small turf patch with stamped concrete patio" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-38.jpg" alt="Pergola with landscape lighting" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-40.jpg" alt="Pergola with dual light fixtures" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-42.jpg" alt="Wood privacy fence installation" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-48.jpg" alt="Hillside retaining wall" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-75.jpg" alt="Retaining wall with paver walkway" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/fb-85.jpg" alt="Paver walkway with gravel and pool area" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="walls">
+          <img src="images/portfolio/fb-95.jpg" alt="Stucco retaining wall with artificial turf" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/fb-110.jpg" alt="Paver steps and planters at new construction" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="turf">
+          <img src="images/portfolio/fb-115.jpg" alt="Putting green with paver steps" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="renovation">
+          <img src="images/portfolio/fb-120.jpg" alt="Stepping stones, turf, wall, and pavers" loading="lazy">
+        </div>
+        <div class="gallery-item" data-category="pavers">
+          <img src="images/portfolio/fb-125.jpg" alt="Paver walkway with retaining wall and mulch beds" loading="lazy">
+        </div>
+
       </div>
     </div>
   </section>
@@ -120,7 +189,7 @@
   <!-- CTA -->
   <section class="section" style="background: var(--bb-warm);">
     <div class="container">
-      <div class="cta-banner" data-aos="fade-up">
+      <div class="cta-banner">
         <h2>Want results like these?</h2>
         <p>Every project starts with a conversation. Tell us about your yard.</p>
         <div class="cta-actions">
@@ -137,10 +206,10 @@
       <div class="footer-grid">
         <div>
           <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
-            <img src="images/hero.jpg" alt="Bulkyboys" style="height:40px;width:auto;border-radius:4px;">
-            <span style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:1.125rem;">Bulkyboys Landscapes</span>
+            <img src="images/logo.png" alt="Bulkyboys" style="height:40px;width:auto;border-radius:4px;">
+            <span style="font-family:var(--font-heading);font-weight:400;color:#fff;font-size:1.25rem;letter-spacing:0.03em;">Bulkyboys Landscapes</span>
           </div>
-          <p>Premium landscaping for East County San Diego homeowners.</p>
+          <p>Landscaping for East County San Diego homeowners.</p>
         </div>
         <div><h4>Services</h4><ul class="footer-links"><li><a href="services.html">Artificial Turf</a></li><li><a href="services.html">Pavers</a></li><li><a href="services.html">Retaining Walls</a></li></ul></div>
         <div><h4>Company</h4><ul class="footer-links"><li><a href="gallery.html">Our Work</a></li><li><a href="areas.html">Service Areas</a></li><li><a href="contact.html">Get a Quote</a></li></ul></div>
@@ -161,7 +230,6 @@
     <a href="tel:6198208064" class="btn btn-green"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call 619-820-8064</a>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
